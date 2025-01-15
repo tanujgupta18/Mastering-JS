@@ -1,12 +1,11 @@
-// Calculate Factorial of the number
-
-function Factorial(num) {
-  result = 1;
-
-  for (let i = 2; i <= num; i++) {
-    result *= i;
+function factorial(num) {
+  if (num < 0) {
+    return "Enter a positive number";
+  } else if (num === 0 || num === 1) {
+    return 1;
+  } else {
+    return num * factorial(num - 1);
   }
-  return result;
 }
 
-console.log(Factorial(0));
+console.log(factorial(5));
