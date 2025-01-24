@@ -1,0 +1,95 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 30px;
+  color: #333;
+}
+
+/* Header */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* Buttons Section */
+.choice-button {
+  height: 100px;
+  width: 100px;
+  border: none;
+  margin: 15px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.choice-button:hover {
+  transform: scale(1.05);
+}
+
+.choice-image {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+}
+
+/* Result and Score Section */
+h3 {
+  font-size: 1.2rem;
+  margin: 10px;
+  color: #555;
+}
+
+#result {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ff5733;
+}
+
+#score {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #333;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 250px;
+  margin: 20px auto;
+}
+
+/* Reset Button */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #ff2a1a;
+}
+
+/* Small text (optional for footer or credits) */
+footer {
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #888;
+}
