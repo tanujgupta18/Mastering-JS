@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practise Set 6</title>
+    <style>
+      .js-odd {
+        background-color: red;
+      }
+
+      .js-even {
+        background-color: aqua;
+      }
+
+      #myBtn {
+        padding: 8px 12px;
+        font-size: 24px;
+        outline: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="greeting"></h3>
+
+    <button id="myBtn" onclick="clickBtn();">0</button>
+  </body>
+  <script>
+    function doGreeting(personName = "Dear") {
+      let date = new Date();
+      let hours = date.getHours();
+      let heading = document.querySelector("#greeting");
+
+      if (hours >= 5 && hours <= 12) {
+        heading.innerText = `Good Morning ${personName}`;
+      } else if (hours > 12 && hours < 18) {
+        heading.innerText = `Good Afternoon ${personName}`;
+      } else {
+        heading.innerText = `Good Night ${personName}`;
+      }
+    }
+    doGreeting("Rahul");
+
+    let noOfTimesClicked = localStorage.getItem("noOfTimesClicked") || 0;
+    function clickBtn() {
+      const btn = document.querySelector("#myBtn");
+      noOfTimesClicked++;
+      localStorage.setItem("noOfTimesClicked", noOfTimesClicked);
+      if (noOfTimesClicked % 2 === 0) {
+        btn.classList.remove("js-odd");
+        btn.classList.add("js-even");
+      } else {
+        btn.classList.remove("js-even");
+        btn.classList.add("js-odd");
+      }
+      btn.innerText = noOfTimesClicked;
+    }
+  </script>
+</html>
